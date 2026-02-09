@@ -1,0 +1,14 @@
+-- LeetCode 176: Second Highest Salary
+-- Return the second highest salary from the Employee table.
+-- If it does not exist, return NULL.
+
+SELECT
+    IFNULL(
+        (
+            SELECT DISTINCT salary
+            FROM Employee
+            ORDER BY salary DESC
+            LIMIT 1 OFFSET 1
+        ),
+        NULL
+    ) AS SecondHighestSalary;

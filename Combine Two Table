@@ -1,0 +1,9 @@
+select 
+    firstName,
+    lastName,
+    city,
+    state 
+from Person 
+left Join Address 
+ON 
+Person.PersonId = Address.personId;

@@ -1,0 +1,10 @@
+-- LeetCode 1527: Patients With a Condition
+-- Find patients whose conditions include Type I Diabetes (DIAB1)
+
+SELECT
+    patient_id,
+    patient_name,
+    conditions
+FROM Patients
+WHERE conditions LIKE 'DIAB1%'
+   OR conditions LIKE '% DIAB1%';

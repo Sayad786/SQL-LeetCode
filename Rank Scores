@@ -1,0 +1,7 @@
+-- LeetCode 178: Rank Scores
+-- Rank scores using dense ranking
+
+SELECT
+    score,
+    DENSE_RANK() OVER (ORDER BY score DESC) AS `rank`
+FROM Scores;
